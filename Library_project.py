@@ -50,7 +50,7 @@ while book != 'стоп':
         titel = input('Введите название').title()
         author = input('Введите автора').title()
         year = input('Введите год написания')
-        add_book(title, author, year)
+        fuction_library.add_book(title, author, year)
         
 
 
