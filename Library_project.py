@@ -1,6 +1,6 @@
 class Book():
     def __init__(self, title, author, year):
-        self.title = title
+        # self.title = title
         self.author = author
         self.year = year
     
@@ -12,12 +12,15 @@ class fuction_library():
         self.library = {}
     
     def add_book(self, title, author, year):
-        new_book = title(author, year)
-        self.library.append(new_book)
-        print('Новая книга', title ,'была добавлена')
+        if title in library:
+            print('Книга уже есть')
+        else:
+            self.library[title] = Book(author, year)
+            # self.library.append(new_book)
+            print('Новая книга', title ,'была добавлена')
         return
     
-    def remove_book(self, titel):
+    def remove_book(self, titel):   
         if titel in self.library:
             del self.library[titel]
         else:
@@ -48,3 +51,12 @@ while book != 'стоп':
         author = input('Введите автора').title()
         year = input('Введите год написания')
         add_book(title, author, year)
+        
+
+
+        
+
+
+
+        
+    
